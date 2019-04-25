@@ -83,6 +83,5 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository {
             rs.getInt("hours")
     );
 
-    private final ResultSetExtractor<TimeEntry> extractor =
-            (rs) -> rs.next() ? mapper.mapRow(rs, 1) : null;
+    private final ResultSetExtractor<TimeEntry> extractor = (rs) -> rs.next() ? mapper.mapRow(rs, 1) : null;
 }
